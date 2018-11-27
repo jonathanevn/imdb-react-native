@@ -1,5 +1,8 @@
 import React from "react";
-
+import Title from "./Title";
+import Baseline from "./Baseline";
+import Synopsis from "./Synopsis";
+import AddButton from "./AddButton";
 import {
   Platform,
   StyleSheet,
@@ -14,11 +17,13 @@ class MoviePreview extends React.Component {
   render() {
     return (
       <View style={styles.section}>
-        <Text style={styles.title}>Interstellar</Text>
-        <Text style={styles.information}>
-          2014 <Text>{"  "}</Text> PG-13 <Text>{"  "}</Text> 2h49min{" "}
-          <Text>{"  "}</Text>Adventure, Drama, Sci-Fi
-        </Text>
+        <Title title="Interstellar" />
+        <Baseline
+          year="2014"
+          prod="PG-13"
+          time="2h49min"
+          genre="Adventure, Drama, Sci-Fi"
+        />
         <View style={styles.picturesAndSynopsis}>
           <Image
             style={{ width: 90, height: 140 }}
@@ -28,13 +33,11 @@ class MoviePreview extends React.Component {
             }}
           />
           <View style={styles.synopsisAndButton}>
-            <Text style={styles.synopsis}>
-              A team of explorers travel through a wormhole in space in an
-              attempt to ensure humanity's survival.
-            </Text>
-            <TouchableOpacity style={styles.button} onPress={this.onPress}>
-              <Text style={styles.textButton}> + ADD TO WATCHLIST </Text>
-            </TouchableOpacity>
+            <Synopsis
+              description="A team of explorers travel through a wormhole in space in an
+              attempt to ensure humanity's survival."
+            />
+            <AddButton />
           </View>
         </View>
 
@@ -107,20 +110,6 @@ const styles = StyleSheet.create({
     marginBottom: 20
   },
 
-  title: {
-    fontSize: 30,
-    textAlign: "left",
-    color: "white"
-  },
-
-  information: {
-    fontSize: 13,
-    textAlign: "left",
-    color: "rgb(177,177,177)",
-    marginBottom: 25,
-    marginTop: 7
-  },
-
   picturesAndSynopsis: {
     flexDirection: "row"
   },
@@ -130,25 +119,6 @@ const styles = StyleSheet.create({
     fontSize: 13,
     paddingLeft: 15,
     color: "white"
-  },
-
-  synopsis: {
-    textAlign: "left",
-    color: "white",
-    marginBottom: 15
-  },
-
-  button: {
-    backgroundColor: "#0277BD",
-    borderRadius: 3
-  },
-
-  textButton: {
-    fontWeight: "bold",
-    padding: 10,
-    color: "white",
-    textAlign: "center",
-    fontSize: 12
   }
 });
 
