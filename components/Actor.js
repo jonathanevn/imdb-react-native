@@ -15,32 +15,32 @@ class Actor extends React.Component {
 
         <ScrollView horizontal={true}>
           <View style={styles.actor}>
-            <Image
-              style={{ width: 120, height: 180 }}
-              source={require("../images/MATTHEW_MCCONAUGHEY.jpg")}
+            <CardActor
+              photo={require("../images/MATTHEW_MCCONAUGHEY.jpg")}
+              name="Matthew McC..."
+              role="Cooper"
             />
-            <CardActor name="Matthew McC..." role="Cooper" />
           </View>
           <View style={styles.actor}>
-            <Image
-              style={{ width: 120, height: 180 }}
-              source={require("../images/ANNE_HATHAWAY.jpg")}
+            <CardActor
+              photo={require("../images/ANNE_HATHAWAY.jpg")}
+              name="Anne Hathaway"
+              role="Brand"
             />
-            <CardActor name="Anne Hathaway" role="Brand" />
           </View>
           <View style={styles.actor}>
-            <Image
-              style={{ width: 120, height: 180 }}
-              source={require("../images/JOHN_LITHGOW.jpg")}
+            <CardActor
+              photo={require("../images/JOHN_LITHGOW.jpg")}
+              name="John Lithgow"
+              role="Donald"
             />
-            <CardActor name="John Lithgow" role="Donald" />
           </View>
           <View style={styles.actor}>
-            <Image
-              style={{ width: 120, height: 180 }}
-              source={require("../images/MICHAEL_CAINE.jpg")}
+            <CardActor
+              photo={require("../images/MICHAEL_CAINE.jpg")}
+              name="Michael Caine"
+              role="Professeur Brand"
             />
-            <CardActor name="Michael Caine" role="Professeur Brand" />
           </View>
         </ScrollView>
 
