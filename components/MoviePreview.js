@@ -3,6 +3,7 @@ import Title from "./Title";
 import Baseline from "./Baseline";
 import Synopsis from "./Synopsis";
 import AddButton from "./AddButton";
+import Rate from "./Rate";
 import {
   Platform,
   StyleSheet,
@@ -41,25 +42,15 @@ class MoviePreview extends React.Component {
           </View>
         </View>
 
-        <View style={styles.rateInformation}>
-          <View style={styles.rate}>
-            <Image source={require("../images/star.png")} />
-            <Text style={styles.rateWhite}>
-              <Text style={{ fontWeight: "bold", fontSize: 16 }}>8.6</Text>
-              /10
-            </Text>
-            <Text style={styles.rateGrey}>1.1M</Text>
-          </View>
-          <View style={styles.rate}>
-            <Image source={require("../images/starWhite.png")} />
-            <Text style={styles.rateWhite}>RATE THIS</Text>
-          </View>
-          <View style={styles.rate}>
-            <Text style={styles.metascore}>74</Text>
-            <Text style={styles.rateWhite}>Metascore</Text>
-            <Text style={styles.rateGrey}>46 critic reviews</Text>
-          </View>
-        </View>
+        <Rate
+          note="8.6"
+          noteTotal="/10"
+          numberRate="1.1M"
+          rateThis="RATE THIS"
+          metascore="74"
+          metascoreLabel="METASCORE"
+          critic="46 critic reviews"
+        />
       </View>
     );
   }
